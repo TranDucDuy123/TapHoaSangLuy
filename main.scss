@@ -51,15 +51,19 @@ body {
             &.active {
                 .icon {
                     color: white;
-                    transform: translateY(-35px);
+                    transform: translateY(-50%);
                 }
 
                 .text {
                     opacity: 1;
-                    transform: translateY(-10px);
+                    transform: translateY(-30%);
                 }
 
                 border-bottom: solid 5px green;
+
+                .indicator {
+                    opacity: 1;
+                }
             }
 
             a {
@@ -75,7 +79,7 @@ body {
 
                 .icon {
                     color: $color-black-1;
-                    line-height: 25px;
+                    line-height: 60px;
                     font-size: 1.5rem;
                     transition: 0.5s;
                 }
@@ -91,35 +95,23 @@ body {
                 }
             }
 
-            // child
-            &:nth-child(1).active~.indicator {
-                left: 6%;
-            }
-
-            &:nth-child(2).active~.indicator {
-                left: 31%;
-            }
-
-            &:nth-child(3).active~.indicator {
-                left: 56%;
-            }
-
-            &:nth-child(4).active~.indicator {
-                left: 81%;
-            }
         }
+
+        .indicator {
+            position: absolute;
+            width: 70px;
+            height: 70px;
+            background-color: green;
+            border-radius: 50%;
+            border: solid 5px white;
+            z-index: 1;
+            top: -50%;
+            opacity: 0;
+
+            &::after {}
+        }
+
     }
 
-    .indicator {
-        position: absolute;
-        width: 13%;
-        height: 100%;
-        background-color: green;
-        border-radius: 50%;
-        border: solid 5px white;
-        z-index: 1;
-        top: -50%;
-        left: 3%;
-    }
 
 }

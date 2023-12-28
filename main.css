@@ -50,11 +50,14 @@ body {
 }
 .navbar ul li.active .icon {
   color: white;
-  transform: translateY(-35px);
+  transform: translateY(-50%);
 }
 .navbar ul li.active .text {
   opacity: 1;
-  transform: translateY(-10px);
+  transform: translateY(-30%);
+}
+.navbar ul li.active .indicator {
+  opacity: 1;
 }
 .navbar ul li a {
   width: 100%;
@@ -69,7 +72,7 @@ body {
 }
 .navbar ul li a .icon {
   color: #363636;
-  line-height: 25px;
+  line-height: 60px;
   font-size: 1.5rem;
   transition: 0.5s;
 }
@@ -82,26 +85,14 @@ body {
   transition: 0.5s;
   opacity: 0;
 }
-.navbar ul li:nth-child(1).active ~ .indicator {
-  left: 6%;
-}
-.navbar ul li:nth-child(2).active ~ .indicator {
-  left: 31%;
-}
-.navbar ul li:nth-child(3).active ~ .indicator {
-  left: 56%;
-}
-.navbar ul li:nth-child(4).active ~ .indicator {
-  left: 81%;
-}
-.navbar .indicator {
+.navbar ul .indicator {
   position: absolute;
-  width: 13%;
-  height: 100%;
+  width: 70px;
+  height: 70px;
   background-color: green;
   border-radius: 50%;
   border: solid 5px white;
   z-index: 1;
   top: -50%;
-  left: 6%;
+  opacity: 0;
 }/*# sourceMappingURL=main.css.map */

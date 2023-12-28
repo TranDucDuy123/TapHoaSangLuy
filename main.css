@@ -96,11 +96,12 @@ body {
 }
 .navbar .indicator {
   position: absolute;
-  width: 70px;
-  height: 70px;
+  width: 13%;
+  height: 100%;
   background-color: green;
   border-radius: 50%;
   border: solid 5px white;
+  z-index: 1;
   top: -50%;
   left: 6%;
 }/*# sourceMappingURL=main.css.map */
